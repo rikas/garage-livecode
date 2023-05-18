@@ -9,11 +9,11 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="stylesheets/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
     <div class="garage" data-controller="garage">
@@ -36,47 +36,42 @@
             fictional).
           </div>
           <div class="text-center">
-            <form
-              class="d-flex flex-column p-3 gap-3"
-              data-garage-target="form"
-              data-action="submit->garage#createCar"
-            >
+            <form class="d-flex flex-column p-3 gap-3" data-action="submit->garage#addCar">
               <input
                 name="brand"
                 type="text"
                 class="form-control"
-                data-garage-target="dataField"
                 placeholder="Ferrari"
+                data-garage-target="brand"
               />
               <input
                 name="model"
                 type="text"
                 class="form-control"
-                data-garage-target="dataField"
                 placeholder="308 GTS"
+                data-garage-target="model"
               />
               <input
                 name="plate"
                 type="text"
                 class="form-control"
-                data-garage-target="dataField"
                 placeholder="56E-478"
+                data-garage-target="plate"
               />
               <input
                 name="owner"
                 type="text"
                 class="form-control"
-                data-garage-target="dataField"
                 placeholder="Thomas Magnum"
+                data-garage-target="owner"
               />
               <input type="submit" class="btn btn-primary" value="Add a Car" />
             </form>
           </div>
         </div>
       </div>
-      <div class="cars-list" data-garage-target="carsList">
-        <!-- NOTE: The team designer left you this template for a car. Enjoy! -->
-      </div>
+
+      <div class="cars-list" data-garage-target="carsList"></div>
     </div>
 
     <script src="main.js"></script>
